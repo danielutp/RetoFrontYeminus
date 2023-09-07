@@ -1,5 +1,5 @@
 export interface IProducto {
-  id?: number,
+  id: string,
   codigo: number,
   descripcion: string,
   listaDePrecios: number,

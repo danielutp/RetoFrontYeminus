@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IProducto } from 'src/app/interfaces/IProducto';
 import { AppService } from 'src/app/services/app.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-producto',
@@ -13,7 +14,7 @@ export class ProductoComponent implements OnInit {
   producto: IProducto[] = [];
   activatedRoute: any;
 
-  constructor(private appService: AppService) {
+  constructor(private router: Router, private appService: AppService) {
     this.producto = [];
   }
 
@@ -25,8 +26,13 @@ export class ProductoComponent implements OnInit {
 
   borrarProducto(producto: IProducto) {
     this.appService.deleteProducto(producto).subscribe();
+    location.reload();
   }
 
-  editarProducto() {
+  editarProducto(producto: IProducto) {
+    console.log(producto)
+    localStorage.setItem('id', String(producto.id));
+    this.router.navigate(['/editarproducto']);
   }
 }
+

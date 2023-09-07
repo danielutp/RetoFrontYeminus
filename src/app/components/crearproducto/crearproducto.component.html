@@ -30,9 +30,9 @@
         </div>
         <div class="mb-3">
           <label class="form-label">Porcentaje Iva</label>
-          <input [(ngModel)]="producto.porcentajeIva" type="text" class="form-control" name="porcentajeIva" />
+          <input [(ngModel)]="producto.porcentajeIva" type="number" class="form-control" name="porcentajeIva" />
         </div>
-        <button (click)="modificarEquipo()" class="btn btn-primary">Guardar</button>
+        <button (click)="crearProducto()" class="btn btn-primary">Crear</button>
       </form>
     </div>
   </div>

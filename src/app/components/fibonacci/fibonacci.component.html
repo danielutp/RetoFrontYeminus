@@ -1,0 +1,13 @@
+<div class="container">
+  <div>
+    <br>
+    <input [(ngModel)]="userInput" placeholder="Escribe el numero">
+    <br>
+    <h4>Ingrese el numero que sea verificar si esta en la serie Fibonacci </h4>
+    <button (click)="fibonacci()" class="btn btn-primary">Verificar</button>
+  </div>
+  <div *ngIf="copiedText">
+    <p>Respuesta: </p>
+    <h3>{{ copiedText }}</h3>
+  </div>
+</div>

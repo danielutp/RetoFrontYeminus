@@ -25,13 +25,16 @@
                     <td>{{product.imagen}}</td>
                     <td>{{product.productoParaLaVenta}}</td>
                     <td>{{product.porcentajeIva}}</td>
-                    <button (click)="borrarProducto(product)">Borrar</button>
-                    <button (click)="editarProducto()">Editar</button>
+                    <button (click)="borrarProducto(product)" class="btn btn-danger">Borrar</button>
+                    <button (click)="editarProducto(product)" class="btn btn-warning">Editar</button>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
+        </div>
+        <div class="buttonC">
+          <button routerLink="/crearproducto" class="btn btn-primary">Crear Producto</button>
         </div>
       </div>
     </div>

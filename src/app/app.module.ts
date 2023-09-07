@@ -8,13 +8,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { EncriptarComponent } from './components/encriptar/encriptar.component';
 import { EditarproductoComponent } from './components/editarproducto/editarproducto.component';
 import { ProductoComponent } from './components/producto/producto.component';
+import { FibonacciComponent } from './components/fibonacci/fibonacci.component';
+import { CrearproductoComponent } from './components/crearproducto/crearproducto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EditarproductoComponent,
     EncriptarComponent,
-    ProductoComponent
+    ProductoComponent,
+    FibonacciComponent,
+    CrearproductoComponent
   ],
   imports: [
     BrowserModule,
