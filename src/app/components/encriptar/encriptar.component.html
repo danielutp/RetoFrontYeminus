@@ -1,0 +1,14 @@
+<div class="container">
+  <div>
+    <br>
+    <input [(ngModel)]="userInput" placeholder="Escribe una frase">
+    <br>
+    <h4>Seleciona la opcion que desea realizar </h4>
+    <button (click)="encriptar()" class="btn btn-primary">Encriptar</button>
+    <button (click)="desencriptar()" class="btn btn-primary">Desencriptar</button>
+  </div>
+  <div *ngIf="copiedText">
+    <p>Texto encriptado: </p>
+    <h3>{{ copiedText }}</h3>
+  </div>
+</div>

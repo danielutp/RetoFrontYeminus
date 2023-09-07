@@ -1,0 +1,39 @@
+<section class="intro">
+  <div class="gradient-custom-1 h-100">
+    <div class="mask d-flex align-items-center h-100">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div class="table-responsive bg-white">
+              <table class="table mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">descripcion</th>
+                    <th scope="col">listaDePrecios</th>
+                    <th scope="col">imagen</th>
+                    <th scope="col">productoParaLaVenta</th>
+                    <th scope="col">porcentajeIva</th>
+                    <th scope="col">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody *ngFor="let product of producto">
+                  <tr>
+                    <td>{{product.codigo}}</td>
+                    <td>{{product.descripcion}}</td>
+                    <td>{{product.listaDePrecios}}</td>
+                    <td>{{product.imagen}}</td>
+                    <td>{{product.productoParaLaVenta}}</td>
+                    <td>{{product.porcentajeIva}}</td>
+                    <button (click)="borrarProducto(product)">Borrar</button>
+                    <button (click)="editarProducto()">Editar</button>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
